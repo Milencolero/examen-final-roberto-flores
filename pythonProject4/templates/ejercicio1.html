@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculos de notas</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/ejercicios.css">
+</head>
+<body>
+<div class="container">
+    <h1>Calculos de notas</h1>
+    <form  action="/ejercicio1" method="POST">
+        <label class="nombre" for="numero1">Ingresa tu Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label class="nombre" for="numero2">Ingresa tu edad</label>
+        <input type="text" id="edad" name="edad" required>
+        <br>
+        <label class="nombre" for="numero3">Ingresa cantidad de tarros a comprar</label>
+        <input type="text" id="tarros" name="tarros" required>
+        <br>
+        <button class=botonera type="submit">CALCULAR</button>
+    {% if resultado %}
+    <div>
+        <h3> Nombre del Cliente: {{nombre}}</h3>
+        <h3> Total sin descuento $ {{valor}}</h3>
+        <h3> El descuento es: $ {{descuento}}</h3>
+        <h3> El total a pagar es $ {{resultado}}</h3>
+    </div>
+    </form>
+    {% endif %}
+</div>
+</body>
+</html>
